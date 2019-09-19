@@ -1,0 +1,54 @@
+#maximum
+
+numbers = [-5,23,0,-9,12,99,105,-43]
+
+d = -9999999 #int.max()
+for i in numbers:
+    if i > d:
+        d = i
+    
+
+print("{} is the maximum.".format(d))
+
+#minimum
+
+# mit lattal eddig, mi volt a legkisebb?
+f = 99999999
+for l in numbers:
+    if l < f:
+        f = l
+
+print("{} is the minimum.".format(f))
+
+#average
+
+
+sum = 0
+for k in numbers:
+    sum += k
+    
+avg = sum / (len(numbers))
+print("{} is the average.".format(avg))
+
+
+
+# (optional)
+'''
+numbers2 = [-5, 23, 0, "kitten", -9, 12, 99, [2, 44], None, 105, -43]
+def find_min(numbers2):
+    i = 0
+    min = 99999999999
+    while i < len(numbers2):
+        if type(numbers2[i]) == int:
+            if numbers2[i] < min:
+                min = numbers2[i]
+        elif type(numbers2[i]) == list:
+            sub_min = 
+            while j < len(numbers2[i]):
+                if type(numbers2[i][j]) == int:
+                    if numbers2[i][j] < min:
+                        min = numbers2[i][j]
+                j += 1
+        i += 1
+print("min: ", min)
+'''
