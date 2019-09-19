@@ -1,0 +1,69 @@
+from collections import defaultdict
+list = []
+id = 0
+
+mark_list = []
+while True:
+
+    command = input("Please specify a command [list, add, mark, archive, quit]: ")
+
+    if command == "add":
+        add = input("Add an item: ")
+        list.append(add)
+        id += 1
+        print("Item added.")
+        mark_list.append(id)
+        
+
+
+    if command == "list":
+        
+        for i, item in enumerate(list,1):
+            print(i, ". [ " + "  " + " ]" + item)
+        
+
+
+    if command == "mark":
+        print("")
+        print("You saved the following to-do items:")
+        print("")
+        for i, item in enumerate(list,1):
+            #list[i] or marked_list[i]
+            print(i, ". [ " + "  " + " ]" + item)
+        
+        marked_number = int(input("Which one do you want to mark as completed: "))
+        k = marked_number - 1 
+
+        for i, item in enumerate(mark_list, 1):
+            
+            if i in range(len(mark_list)):
+                print(str(i), ". [ " + " X " + " ]" + str(item))
+            else:
+                print(str(i), ". [ " + " " + " ]" + str(item))
+        print("{} is completed".format(list[k]))
+        for x in range(len(list)):
+            # index mark
+            if x == k:
+        
+                print(str(x+1), ". [ " + " X " + " ]" + str(item)) # 0,1,2 (2-dik) itemet printolja ki
+
+            
+        
+# compare index with marked_number
+# for ciklus, if it's k == X
+#ha a k. iteracioban vagy A, ha nem akkor B
+        # if :
+        #     is_marked = True   
+        # if is_marked == True:
+        #     " X " = "X"
+        #     print(i, ". [ " + " X " + " ]" + item)
+        
+# csak akkor rakj X-et ha IGAZ, hogy X-et kell raknod
+
+    if command == "archive":
+        del list[k]
+        print("All completed tasks got deleted")
+
+
+    if command == "quit":
+        exit()
