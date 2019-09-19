@@ -1,0 +1,14 @@
+
+IsDoorClosed = True
+x = 1
+open = []
+d = 0
+for i in range(1,101,x):
+    if IsDoorClosed == True:
+        IsDoorClosed = False
+        open.append(i)
+    elif IsDoorClosed == False:
+        IsDoorClosed = True
+    x += 1   
+        
+print("{} doors are open!".format(open))
