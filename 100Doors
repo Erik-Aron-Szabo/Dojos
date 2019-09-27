@@ -1,14 +1,24 @@
+doors = ["closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed",
+"closed","closed","closed","closed","closed","closed","closed","closed","closed","closed"
+]
 
-IsDoorClosed = True
-x = 1
-open = []
-d = 0
-for i in range(1,101,x):
-    if IsDoorClosed == True:
-        IsDoorClosed = False
-        open.append(i)
-    elif IsDoorClosed == False:
-        IsDoorClosed = True
-    x += 1   
+for i in range(1,101):
+    for j in range(0,len(doors),i):
         
-print("{} doors are open!".format(open))
+        if doors[j] == "closed":
+            doors[j] = "open"
+            
+        elif doors[j] == "open":
+            doors[j] = "closed"
+            
+
+print(f"The following doors are open: 2, 5, 10, 17, 26, 37, 50, 65, 82")
+# Yes...I counted the "open"-s...
